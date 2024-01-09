@@ -1,0 +1,9 @@
+---
+- name: Default Playbook - Starting Deploy
+  hosts: all
+
+  tasks:
+    - name: get Ansible facts
+      debug:
+        var: ansible_facts
+...
