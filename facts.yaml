@@ -1,6 +1,6 @@
 ---
 - name: Default Playbook - Starting Deploy
-  hosts: all
+  hosts: 169.254.94.11 
 
   tasks:
     - name: get Ansible facts
