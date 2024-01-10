@@ -1,0 +1,8 @@
+---
+- name: Testando a comunicação com os Hosts ( Linux )
+  hosts: all
+
+  tasks:
+    - name: Testando a comunicação
+      ping:
+        data: pong
