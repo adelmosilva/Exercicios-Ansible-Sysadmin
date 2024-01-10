@@ -12,6 +12,10 @@ local
 debian
 rocky
 
+[linux:vars]
+ansible_user=vagrant
+ansible_password=vagrant
+
 [winserver]
 169.254.94.13
 
