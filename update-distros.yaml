@@ -1,0 +1,27 @@
+---
+- name: Atualizando as Distros Linux do DC
+  hosts: linux
+  become: yes
+  #become_user: vagrant
+  gather_facts: yes
+
+  tasks:
+    - name: Atualizando as distros Oracle Linux e Rocky Linux
+      yum:
+        name: "*"
+        state: latest
+        update_cache: yes
+      when: ansible_distribution == "Rocky" or ansible_distribution == "ol"
+
+    - name: Atualizando o cache  distro Debian
+      apt:
+        update_cache: yes
+      when: ansible_distribution == "debian"
+
+    - name: Atualizando os pacotes do Debian
+      apt:
+        name: "*"
+        state: latest
+      when: ansible_distribution == "debian"    
+
+...
