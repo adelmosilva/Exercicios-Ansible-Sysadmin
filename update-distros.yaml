@@ -11,17 +11,17 @@
         name: "*"
         state: latest
         update_cache: yes
-      when: ansible_distribution == "Rocky" or ansible_distribution == "ol"
+      when: ansible_distribution == "Rocky" or ansible_distribution == "Redhat"
 
     - name: Atualizando o cache  distro Debian
       apt:
         update_cache: yes
-      when: ansible_distribution == "debian"
+      when: ansible_distribution == "Debian" or ansible_distribution == "Ubuntu"
 
     - name: Atualizando os pacotes do Debian
       apt:
         name: "*"
         state: latest
-      when: ansible_distribution == "debian"    
+      when: ansible_distribution == "Debian" or ansible_distribution == "Ubuntu"   
 
 ...
