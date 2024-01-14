@@ -1,8 +1,6 @@
 ---
 - name: Atualizando as Distros Linux do DC
   hosts: linux
-  become: yes
-  become_user: vagrant
   gather_facts: yes
 
   tasks:
