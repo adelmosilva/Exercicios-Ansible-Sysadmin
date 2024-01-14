@@ -1,11 +1,11 @@
 [local]
-169.254.94.10
+192.168.56.10
 
 [debian]
-169.254.94.12
+192.168.56.12
 
 [rocky]
-169.254.94.11
+192.168.56.11
 
 [linux:children]
 local
@@ -17,5 +17,5 @@ ansible_user=vagrant
 ansible_password=vagrant
 
 [winserver]
-169.254.94.13
+192.168.56.13
 
