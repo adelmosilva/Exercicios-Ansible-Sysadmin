@@ -4,12 +4,12 @@
   gather_facts: yes
 
   tasks:
-    - name: Atualizando as distros Oracle Linux e Rocky Linux
+    - name: Instalando pacotes via YUM
       yum:
         name: "{{ packages }}" 
         state: latest
         #update_cache: yes
-      when: ansible_distribution == "Rocky" or ansible_distribution == "Redhat" or ansible_distribution == "ol"
+      when: ansible_distribution == "rocky" or ansible_distribution == "Redhat" or ansible_distribution == "ol"
 
 
 ...
