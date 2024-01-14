@@ -1,0 +1,14 @@
+---
+- name: Atualizando as Distros Linux do DC
+  hosts: linux
+  gather_facts: yes
+
+  tasks:
+    - name: USER | Add user
+      user: "{{ username }}"
+        name: "{{ username }}"
+        comment: "{{ comment }}"
+        shell: "{{ shell }}"
+        home: "{{ home }}"
+        password: "{{ '{{ password }}' | password_hash('sha512', 'mysecrectsalt') }}"
+...
