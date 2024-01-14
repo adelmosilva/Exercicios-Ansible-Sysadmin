@@ -1,0 +1,15 @@
+---
+- name: Instalação de Pacotes
+  hosts: linux
+  gather_facts: yes
+
+  tasks:
+    - name: Atualizando as distros Oracle Linux e Rocky Linux
+      yum:
+        name: "{{ packages }}" state=latet
+        state: latest
+        #update_cache: yes
+      when: ansible_distribution == "Rocky" or ansible_distribution == "Redhat" or ansible_distribution == "ol"
+
+
+...
