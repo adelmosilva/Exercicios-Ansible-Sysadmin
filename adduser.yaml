@@ -5,7 +5,7 @@
 
   tasks:
     - name: USER | Add user
-      user: "{{ username }}"
+      user: 
         name: "{{ username }}"
         comment: "{{ comment }}"
         shell: "{{ shell }}"
