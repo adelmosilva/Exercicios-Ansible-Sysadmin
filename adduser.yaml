@@ -1,5 +1,5 @@
 ---
-- name: Atualizando as Distros Linux do DC
+- name: Criando usuários no Linux
   hosts: linux
   gather_facts: yes
 
@@ -11,4 +11,8 @@
         shell: "{{ shell }}"
         home: "{{ home }}"
         password: "{{ '{{ password }}' | password_hash('sha512', 'mysecrectsalt') }}"
+
+        
+        
+        
 ...
