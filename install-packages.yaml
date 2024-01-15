@@ -6,10 +6,9 @@
   tasks:
     - name: Instalando pacotes via YUM
       yum:
-        name: "{{ packages }}" 
-        state: latest
+        name: "{{ packages }}" state=latest
         #update_cache: yes
-      when: ansible_distribution == "Rocky" or ansible_distribution == "RedHat" or ansible_distribution == "ol"
+      when: ansible_distribution == "Rocky" or ansible_distribution == "RedHat" or ansible_distribution == "Oracle"
 
 
 ...
