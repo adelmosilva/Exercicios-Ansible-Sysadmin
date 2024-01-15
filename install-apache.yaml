@@ -1,7 +1,7 @@
 ---
 
 - name: Install Apache on Debian
-  hosts: all
+  hosts: debian
   tasks: 
     - name: APT | Update System
       apt: 
