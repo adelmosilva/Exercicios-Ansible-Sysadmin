@@ -7,10 +7,14 @@
 [rocky]
 192.168.56.11
 
+[weblogicsrv]
+192.168.56.16
+
 [linux:children]
 local
 debian
 rocky
+weblogicsrv
 
 [linux:vars]
 ansible_user=vagrant
